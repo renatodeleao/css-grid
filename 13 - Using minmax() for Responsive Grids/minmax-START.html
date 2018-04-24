@@ -17,11 +17,22 @@
   </div>
 
   <style>
+    /*
+     * Responding
+     * auto-fit and auto-fill  with min max give us the responsive
+     * holy gray of grids
+     * 1. If you use auto-fill the remaning space will be filled with more
+     * grid empty spots
+     * 1. if you use auto-fit, the remmaing space will be collapse and
+     * grid items will expand to parent and wrap when there's no space
+     * 1. fit-content,is auto with a max with for row
+     */
     .container {
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
-      grid-template-columns: repeat(auto-fill, 150px);
+      /*grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));*/
+      grid-template-columns: fit-content(100px) 150px 150px 150px;
     }
   </style>
 </body>

@@ -14,11 +14,27 @@
     <div class="item">2</div>
     <div class="item">3</div>
     <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
   </div>
 
   <style>
+    /**
+     * IMPLICIT
+     */
     .container {
       display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 200px 400px;
+      grid-template-rows: 50px 100px;
+      /*rows are implicited if not defined */
+      grid-auto-rows: 500px;
+      /* now every additional row it will be 500px*/
+
+      /* this doens't give use automatic columns why?*/
+      grid-auto-columns: 100px;
     }
   </style>
 </body>

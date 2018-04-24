@@ -43,9 +43,26 @@
   </div>
 
   <style>
+    /*
+     * You can use area names with -start and -end
+     * suffixes to place your items. Instead of using
+     * Numbers we are using line names
+     * More on the next section
+     */
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-areas:
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+        "💩 💩 💩 💩 🍔 🍔 🍔 🍔"
+    }
+
+    .item3{
+      /*grid-area:💩;*/
+      grid-column: 💩-start / 💩-end;
+      grid-row-end: 💩-end;
     }
   </style>
 </body>

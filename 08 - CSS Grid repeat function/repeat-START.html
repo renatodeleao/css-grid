@@ -31,6 +31,12 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      /*
+       * repeat(n, [...layout])
+       * you can mix and match if more than one value provided
+       * to layout arg it will apply alternate mode
+       */
+      grid-template-columns: 100px repeat(2, 50px 100px) 200px;
     }
   </style>
 </body>

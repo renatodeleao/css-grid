@@ -18,7 +18,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item item8 poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -44,10 +44,30 @@
   </div>
 
   <style>
+    /*
+    * 1. grid-column is shorhand for
+    * grid-column-start
+    * grid-column-end
+    * 1. grid-column-end: -1 = width 100% it spans across
+    * or explicit says when it end, or span across x grid spots
+    * 3. negative numbers only work to explicit grid, not implicit
+    */
     .container {
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(5, 1fr);
+      /*grid-template-rows: repeat(5, 1fr);*/
+    }
+
+    .poop{
+      background: #BADA55;
+      
+      /* grid-column-start: 2;
+      grid-column-end: 5; */
+      
+      /*grid-column: 1 / span 4;*/
+      grid-column: span 2; /* last track */
+      grid-row: 1 / -1; /* only goes to bottom of explicit grid*/
     }
   </style>
 </body>
